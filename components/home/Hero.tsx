@@ -1,10 +1,14 @@
 import React from "react";
-import Image from "next/image";
+
 import { Button } from "../ui/button";
+import HeroImageSlider from "../subComponents/HeroImageSlider";
 
 export default function Hero() {
   return (
-    <div className="flex border w-[95%] items-center justify-between mt-7  ">
+    <section
+      id="home"
+      className="flex  w-[95%] items-center justify-between mt-7   "
+    >
       <div className=" pb-60">
         <div className="bg-[#beeccc] w-max  rounded-full mb-4">
           <p className="text-[#00aa00] py-1  px-2">Your Local Pharmacy</p>
@@ -42,15 +46,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="w-[60%] pb-20 ">
-        <Image
-          src="/image/hero/pharmacist10.jpg"
-          alt="logo"
-          height={250}
-          width={250}
-          className="h-150 w-full rounded-md "
-        />
+      <div className="w-[60%] pb-18 borde-2 ">
+        <HeroImageSlider />
       </div>
-    </div>
+    </section>
   );
 }

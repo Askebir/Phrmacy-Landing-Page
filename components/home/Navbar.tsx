@@ -23,11 +23,11 @@ export default function Navbar() {
         </div>
       </Link>
       <div className="flex gap-8 text-black text- ">
-        <Link href="#home">Home</Link>
-        <Link href="#about">About</Link>
-        <Link href="#services">Services</Link>
-        <Link href="#products">Products</Link>
-        <Link href="#contact">Contact</Link>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
       </div>
       <div>
         <Button asChild className="rounded-full">
