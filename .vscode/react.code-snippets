@@ -1,0 +1,42 @@
+{
+  "React Functional Component": {
+    "prefix": ["rfc"],
+    "body": [
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "  return (",
+      "    <div>$0</div>",
+      "  );",
+      "}"
+    ],
+    "description": "React Functional Component (rfc)",
+    "scope": "typescriptreact,javascriptreact,typescript,javascript"
+  },
+  "React Functional Component Export": {
+    "prefix": ["rfce"],
+    "body": [
+      "function ${1:${TM_FILENAME_BASE}}() {",
+      "  return (",
+      "    <div>$0</div>",
+      "  );",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+    "description": "React Functional Component with export (rfce)",
+    "scope": "typescriptreact,javascriptreact,typescript,javascript"
+  },
+  "React Arrow Function Component Export": {
+    "prefix": ["rafce"],
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "  return (",
+      "    <div>$0</div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+    "description": "React Arrow Function Component with export (rafce)",
+    "scope": "typescriptreact,javascriptreact,typescript,javascript"
+  }
+}

@@ -32,5 +32,8 @@ pnpm-debug.log*
 .DS_Store
 *.pem
 
-# IDE
-.vscode/
+# IDE — keep shared Cursor/VS Code project settings & snippets
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets

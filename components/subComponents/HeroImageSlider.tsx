@@ -25,7 +25,7 @@ export default function HeroImageSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((previous) => (previous + 1) % images.length);
-    }, 3000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
