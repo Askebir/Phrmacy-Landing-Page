@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WhyUs() {
   return (
-    <section className="flex justify-between w-full  py-5 mt-4 gap-4">
+    <section className="flex justify-between w-full  py-5 mt-4 gap-4 px-30  ">
       <div className="flex flex-col ml-10">
         <LightText text="why Us" />
         <p className="text-3xl font-bold ">Why Choose Us?</p>

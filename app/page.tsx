@@ -19,7 +19,6 @@ export default function Home() {
       <CustomerFeedback />
       <FindUs />
       <Contact />
-      <Footer />
     </div>
   );
 }
