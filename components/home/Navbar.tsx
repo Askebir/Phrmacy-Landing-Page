@@ -24,8 +24,9 @@ export default function Navbar() {
       </Link>
       <div className="flex gap-8 text-black text- ">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#about">About</a>
+
         <a href="#products">Products</a>
         <a href="#contact">Contact</a>
       </div>

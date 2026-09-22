@@ -39,7 +39,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="scroll-mt-14 bg-[#d2e7e1] h-270 w-full pt-15"
+      className="scroll-mt-14 bg-[#d2e7e1] h-200 w-full pt-15"
     >
       <div className="flex flex-col ">
         <div className="flex flex-col">
@@ -51,22 +51,17 @@ export default function Services() {
           </div>
           <div className="flex flex-col justify-center  items-center pb-8 text-black/65">
             <p>
-              Professional services designed to make everyday healthcare more   
+              Professional services designed to make everyday healthcare more
             </p>
             <p className="flex justify-center"> convenient.</p>
           </div>
         </div>
-         
-          <div className="flex flex-wrap justify-center items-center gap-3 pb-7 " >
+
+        <div className="flex flex-wrap justify-center items-center gap-3 pb-7 ">
           {serviceCardObj.map((service) => (
-           
-            
-           <ServiceCard key={service.title} serviceCardObj={service} />
-           
-         ))}
-          </div>
-  
-      
+            <ServiceCard key={service.title} serviceCardObj={service} />
+          ))}
+        </div>
 
         <div>
           <div className="flex justify-center pb-6 ">
