@@ -6,11 +6,16 @@ import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 import LightText from "../subComponents/LightText";
 import { Phone, Mail, MapPin, Clock, MapPinned } from "lucide-react";
+import { toast } from "sonner";
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
+
+  const [isSending, setIsSending] = useState(false);
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setIsSending(true);
 
     try {
       const result = await emailjs.sendForm(
@@ -23,8 +28,13 @@ export default function Contact() {
       );
 
       console.log("SUCCESS!", result);
+      form.current?.reset();
+      toast.success("Message sent successfully!");
     } catch (error) {
       console.log("FAILED...", error);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setIsSending(false);
     }
   }
 
@@ -119,7 +129,13 @@ export default function Contact() {
               />
             </div>
             <div className="bg-green-700 text-white rounded-full p-3  my-5 text-2xl text-center font-bold">
-              <button type="submit">Send Message</button>
+              <button
+                type="submit"
+                disabled={isSending}
+                className="disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSending ? "Sending..." : "Send Message"}
+              </button>
             </div>
           </div>
         </form>
