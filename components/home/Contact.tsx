@@ -1,33 +1,31 @@
 "use client";
 
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 import React, { useState } from "react";
 import LightText from "../subComponents/LightText";
 import { Phone, Mail, MapPin, Clock, MapPinned } from "lucide-react";
-import GreenButton from "../subComponents/GreenButton";
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
+  const form = useRef<HTMLFormElement>(null);
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    const response = await fetch("/api/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        message,
-      }),
-    });
+    try {
+      const result = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        form.current!,
+        {
+          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+        }
+      );
 
-    const result = await response.json();
-
-    console.log(result);
+      console.log("SUCCESS!", result);
+    } catch (error) {
+      console.log("FAILED...", error);
+    }
   }
 
   return (
@@ -82,7 +80,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={handleSubmit}>
           <div className="flex flex-col px-5 bg-white w-100 rounded-xl">
             <div>
               <p className="text-2xl font-bold mb-3 pt-5">Send Us a Message</p>
@@ -93,22 +91,20 @@ export default function Contact() {
                 <label htmlFor="name">Your Name</label>
                 <input
                   id="name"
+                  name="name"
                   type="text"
                   placeholder="e.g john Smith"
                   className="rounded-xl bg-white p-3 border-3 "
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className=" flex flex-col  ">
                 <label htmlFor="email">Email</label>
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="e.g john Smith"
                   className="rounded-xl bg-white p-3 border-3 "
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
             </div>
@@ -117,10 +113,9 @@ export default function Contact() {
               <textarea
                 id="message"
 
+                name="message"
                 placeholder="e.g john Smith"
                 className="rounded-xl bg-white p-3 border-3 "
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
               />
             </div>
             <div className="bg-green-700 text-white rounded-full p-3  my-5 text-2xl text-center font-bold">
