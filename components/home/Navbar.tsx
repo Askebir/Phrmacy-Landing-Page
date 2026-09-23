@@ -1,11 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
 export default function Navbar() {
+  const [activeLink, setActiveLink] = useState("");
+
   return (
-    <nav className="relative z-100 sticky top-0 bg-white h-14 px-3 border text-xl flex items-center justify-between shadow-xl">
+    <nav className="relative z-100 sticky top-0 bg-white h-14 py-7 px-3 border text-xl flex items-center justify-between shadow-xl  ">
       <a href="#home">
         <div className="flex items-center justify-center gap-3">
           <div className="">
@@ -18,39 +22,69 @@ export default function Navbar() {
             />
           </div>
           <div>
-            <p className="text-black text-xl text-bold ">Lebu Pharmacy</p>
+            <p className=" text-4xl text-bold text-[#51426d] ">Lebu Pharmacy</p>
           </div>
         </div>
       </a>
       <div className="flex gap-8 text-black text- ">
         <a
           href="#home"
-          className="hover:underline active:underline  hover:text-blue-600  active:text-blue-600  "
+          onClick={() => setActiveLink("home")}
+          className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
+            ${
+              activeLink === "home"
+                ? "text-blue-600 border-b-2 border-blue-600"
+                : "text-gray-700 border-b-2 border-transparent"
+            }`}
         >
           Home
         </a>
         <a
           href="#products"
-          className="hover:underline active:underline  hover:text-blue-600  active:text-blue-600 "
+          onClick={() => setActiveLink("products")}
+          className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
+            ${
+              activeLink === "products"
+                ? "text-blue-600 border-b-2 border-blue-600"
+                : "text-gray-700 border-b-2 border-transparent"
+            }`}
         >
           Products
         </a>
         <a
           href="#services"
-          className="hover:underline active:underline  hover:text-blue-600  active:text-blue-600  "
+          onClick={() => setActiveLink("services")}
+          className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
+            ${
+              activeLink === "services"
+                ? "text-blue-600 border-b-2 border-blue-600"
+                : "text-gray-700 border-b-2 border-transparent"
+            }`}
         >
           Services
         </a>
         <a
           href="#about"
-          className="hover:underline active:underline hover:text-blue-600  active:text-blue-600  "
+          onClick={() => setActiveLink("about")}
+          className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
+            ${
+              activeLink === "about"
+                ? "text-blue-600 border-b-2 border-blue-600"
+                : "text-gray-700 border-b-2 border-transparent"
+            }`}
         >
           About
         </a>
 
         <a
           href="#contact"
-          className="hover:underline active:underline  hover:text-blue-600  active:text-blue-600  "
+          onClick={() => setActiveLink("contact")}
+          className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
+            ${
+              activeLink === "contact"
+                ? "text-blue-600 border-b-2 border-blue-600"
+                : "text-gray-700 border-b-2 border-transparent"
+            }`}
         >
           Contact
         </a>
@@ -68,7 +102,7 @@ export default function Navbar() {
     duration-300
     hover:bg-blue-700
     hover:scale-105
-    active:scale-95"
+    active:scale-95 text-xl  "
           >
             Free Consultation
           </Link>

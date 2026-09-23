@@ -27,7 +27,7 @@ const ProductsObjs = [
 
 export default function Products() {
   return (
-    <section id="products" className="pb-40 pt-20 bg-[#d2e7e1] w-full ">
+    <section id="products" className="pb-40 pt-20 bg-[#d2e7e1] w-full mb-7  ">
       <div className="flex flex-col itmes-center justify-center">
         <div>
           <div className="flex itmes-center justify-center">
