@@ -83,7 +83,7 @@ export default function Contact() {
               <div>
                 <p className="text-xl font-bold">Visit Us</p>
                 <p className="text-green-800">
-                  123 Main Street Springfield, IL 62701
+                  Lebu Muzikzbet, Addis Ababa, Ethiopia
                 </p>
               </div>
             </div>
@@ -103,8 +103,9 @@ export default function Contact() {
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="e.g john Smith"
-                  className="rounded-xl bg-white p-3 border-3 "
+                  required
+                  placeholder="e.g Bereket"
+                  className="rounded-xl bg-white p-3 border-3     focus:border-green-600 "
                 />
               </div>
               <div className=" flex flex-col  ">
@@ -113,8 +114,9 @@ export default function Contact() {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="e.g john Smith"
-                  className="rounded-xl bg-white p-3 border-3 "
+                  required
+                  placeholder="Email"
+                  className="rounded-xl bg-white p-3 border-3    focus:border-green-600 "
                 />
               </div>
             </div>
@@ -122,17 +124,17 @@ export default function Contact() {
               <label htmlFor="message">Your message</label>
               <textarea
                 id="message"
-
+                required
                 name="message"
-                placeholder="e.g john Smith"
-                className="rounded-xl bg-white p-3 border-3 "
+                placeholder="Write Your Message here"
+                className="rounded-xl bg-white p-3 border-3    focus:border-green-600 "
               />
             </div>
-            <div className="bg-green-700 text-white rounded-full p-3  my-5 text-2xl text-center font-bold">
+            <div className="bg-green-700 text-white rounded-full p-3  my-5 text-2xl hover:scale-102   text-center font-bold">
               <button
                 type="submit"
                 disabled={isSending}
-                className="disabled:opacity-50 disabled:cursor-not-allowed"
+                className="disabled:opacity-50 disabled:cursor-not-allowed "
               >
                 {isSending ? "Sending..." : "Send Message"}
               </button>

@@ -18,7 +18,7 @@ export default function FindUs() {
             <div className="pb-6">
               <p>Address</p>
               <p className="text-black/50 ">
-                123 Main Street. Springfield, IL 62701
+                Lebu Muzikzbet, Addis Ababa, Ethiopia
               </p>
             </div>
             <div className="pb-6">
@@ -42,20 +42,32 @@ export default function FindUs() {
               </div>
             </div>
           </div>
-          <div className="  flex text-green-600 justify-center items-center rounded-3xl ">
-            <Link
-              href="https://maps.app.goo.gl/ADTPMYMR3DdV8ejL7?g_st=ac"
-              target="_blank "
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/map1.jpg"
-                alt="Our Location Map"
-                width={400}
-                height={200}
-                className="rounded-3xl w-120 h-80 "
-              />
-            </Link>
+
+          <div className="relative z-10 flex items-center justify-center">
+            <div className="relative flex justify-center items-center rounded-3xl border-3 border-black/40  drop-shadow-2xl">
+              <Link
+                href="https://maps.app.goo.gl/ADTPMYMR3DdV8ejL7?g_st=ac"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative block hover:scale-102 "
+              >
+                {/* Map image */}
+                <Image
+                  src="/map1.jpg"
+                  alt="Our Location Map"
+                  width={400}
+                  height={200}
+                  className="rounded-3xl w-120 h-80 hover:scale-120 "
+                />
+
+                {/* Dark transparent overlay */}
+                <div className="absolute inset-0 flex items-center justify-center rounded-3xl bg-black/20">
+                  <span className="rounded-full bg-white/80 px-3 py-2 mb-50  font-bold text-black shadow-lg hover:scale-105 ">
+                    Click to Open Google Maps
+                  </span>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

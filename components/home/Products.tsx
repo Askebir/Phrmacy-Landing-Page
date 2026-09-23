@@ -27,7 +27,7 @@ const ProductsObjs = [
 
 export default function Products() {
   return (
-    <section id="products" className="pb-40 bg-[#d2e7e1] ">
+    <section id="products" className="pb-40 pt-20 bg-[#d2e7e1] w-full ">
       <div className="flex flex-col itmes-center justify-center">
         <div>
           <div className="flex itmes-center justify-center">
@@ -45,12 +45,12 @@ export default function Products() {
           </div>
         </div>
         <div>
-          <div className="flex   flex-wrap place-items-center justify-center gap-7 ">
+          <div className="flex   flex-wrap place-items-center justify-center gap-7  ">
             {ProductsObjs.map((product) => {
               return (
                 <div
                   key={product.title}
-                  className="w-100 h-100 m-5 rounded-t-2xl  bg-[#7a7a7a] "
+                  className="w-75 h-75 m-5 rounded-t-2xl  bg-[#7a7a7a] "
                 >
                   <ProductCard ProductObj={product} />
                 </div>

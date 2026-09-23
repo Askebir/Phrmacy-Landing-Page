@@ -41,9 +41,9 @@ export default function WhyUs() {
       </div>
 
       <div className="flex flex-col mr-10">
-        <div className="bg-green-700 text-white rounded-2xl p-4 mb-4 ">
+        <div className="bg-green-700 text-white rounded-2xl py-8 mb-10 ">
           <p className="text-7xl flex items-center justify-center">10+</p>
-          <p className="text-2xl flex items-center justify-center">
+          <p className="text-2xl flex items-center justify-center pb-2 ">
             Yours Serving Our Community
           </p>
           <p className="text-green-300 flex items-center justify-center ">

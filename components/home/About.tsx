@@ -23,7 +23,7 @@ const NumberValues = [
 
 export default function About() {
   return (
-    <section id="about" className="flex mt-7  mx-15 ">
+    <section id="about" className="flex mt-7  mx-15 scroll-mt-16 mb-25">
       <div className="w-1/2 flex justify-center items-center ">
         <Image
           src="/image/hero/pharmacist3.jpg"
@@ -35,7 +35,7 @@ export default function About() {
       </div>
       <div className="flex flex-col w-1/2 ">
         <div className="flex justify-center pb-4 ">
-          <LightText text="ABOUT OUT PHARMACY" />
+          <LightText text="ABOUT OUR PHARMACY" />
         </div>
         <div>
           <p className=" text-5xl mb-6 font-bold">
