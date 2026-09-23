@@ -39,7 +39,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="scroll-mt-14 bg-[#d2e7e1] h-200 w-full pt-15"
+      className="scroll-mt-14 bg-[#d2e7e1] h-200 w-full pt-1 "
     >
       <div className="flex flex-col ">
         <div className="flex flex-col">

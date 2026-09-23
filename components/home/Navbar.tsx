@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 export default function Navbar() {
   return (
     <nav className="relative z-100 sticky top-0 bg-white h-14 px-3 border text-xl flex items-center justify-between shadow-xl">
-      <Link href="/">
+      <a href="#home">
         <div className="flex items-center justify-center gap-3">
           <div className="">
             <Image
@@ -21,22 +21,37 @@ export default function Navbar() {
             <p className="text-black text-xl text-bold ">Lebu Pharmacy</p>
           </div>
         </div>
-      </Link>
+      </a>
       <div className="flex gap-8 text-black text- ">
-        <a href="#home" className="hover:underline">
+        <a
+          href="#home"
+          className="hover:underline active:underline  hover:text-blue-600  active:text-blue-600  "
+        >
           Home
         </a>
-        <a href="#products" className="hover:underline">
+        <a
+          href="#products"
+          className="hover:underline active:underline  hover:text-blue-600  active:text-blue-600 "
+        >
           Products
         </a>
-        <a href="#services" className="hover:underline">
+        <a
+          href="#services"
+          className="hover:underline active:underline  hover:text-blue-600  active:text-blue-600  "
+        >
           Services
         </a>
-        <a href="#about" className="hover:underline">
+        <a
+          href="#about"
+          className="hover:underline active:underline hover:text-blue-600  active:text-blue-600  "
+        >
           About
         </a>
 
-        <a href="#contact" className="hover:underline active:underline ">
+        <a
+          href="#contact"
+          className="hover:underline active:underline  hover:text-blue-600  active:text-blue-600  "
+        >
           Contact
         </a>
       </div>

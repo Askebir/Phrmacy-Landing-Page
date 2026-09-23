@@ -15,7 +15,13 @@ export default function Footer() {
           <p className="text-white py-4">
             Talk with our pharmacy team and get professional assistance.
           </p>
-          <LightText text="Get Free Consultation" className="bg-white" />
+          <a href="tel:+251911234567">
+            <div className=" bg-white w-max  rounded-full mb-4 text-5xl py-2 font-bold  hover:scale-101 shadow-2xl ">
+              <p className="text-[#00aa00] py-1  px-10  ">
+                Get Free Consultation
+              </p>
+            </div>
+          </a>
         </div>
         <div className="bg-[#090f1d] px-20 py-15 mx-auto ">
           <div className=" grid grid-cols-4 gap-8 bg-[#090f1d] text-white/40  ">

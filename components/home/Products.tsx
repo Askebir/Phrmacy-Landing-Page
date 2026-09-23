@@ -9,12 +9,12 @@ const ProductsObjs = [
     description: "Prescription and over-the-counter medications.",
   },
   {
-    image: "/image/products/Cosmetics.jpeg",
+    image: "/image/products/Cosmetics.png",
     title: "Cosmetics",
     description: "Skincare, haircare, and beauty essentials.",
   },
   {
-    image: "/image/products/Baby Essentials.jpeg",
+    image: "/image/products/Baby Essentials.png",
     title: "Baby Essentials",
     description: "Safe products for newborns and toddlers.",
   },
@@ -50,7 +50,7 @@ export default function Products() {
               return (
                 <div
                   key={product.title}
-                  className="w-75 h-75 m-5 rounded-t-2xl  bg-[#7a7a7a] "
+                  className="w-75 h-75 m-5 rounded-t-2xl   "
                 >
                   <ProductCard ProductObj={product} />
                 </div>
