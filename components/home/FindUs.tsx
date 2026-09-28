@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function FindUs() {
   return (
-    <section className=" py-20 w-full ">
+    <section className=" py-20 w-full bg-[#d2e7e1] mt-7 mb-8 ">
       <div className="flex flex-col h-150  items-center justify-center mx-auto px-10  ">
         <div className="flex items-center justify-center mb-7 ">
           <LightText text="Find Us" />

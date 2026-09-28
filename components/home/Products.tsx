@@ -7,27 +7,31 @@ const ProductsObjs = [
     image: "/image/products/Medicines.jpeg",
     title: "Medicines",
     description: "Prescription and over-the-counter medications.",
+    link: "/Medicines",
   },
   {
     image: "/image/products/Cosmetics.png",
     title: "Cosmetics",
     description: "Skincare, haircare, and beauty essentials.",
+    link: "/Cosmetics",
   },
   {
     image: "/image/products/Baby Essentials.png",
     title: "Baby Essentials",
     description: "Safe products for newborns and toddlers.",
+    link: "/Baby Essentials",
   },
   {
     image: "/image/products/Personal Care.jpeg",
     title: "Personal Care",
     description: "Daily hygiene and wellness products.",
+    link: "/Personal Care",
   },
 ];
 
 export default function Products() {
   return (
-    <section id="products" className="pb-40 pt-20 bg-[#d2e7e1] w-full mb-7  ">
+    <section id="products" className="pb-50 pt-20 bg-[#d2e7e1] w-full mb-7  ">
       <div className="flex flex-col itmes-center justify-center">
         <div>
           <div className="flex itmes-center justify-center">

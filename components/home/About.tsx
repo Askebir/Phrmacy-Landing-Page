@@ -23,7 +23,10 @@ const NumberValues = [
 
 export default function About() {
   return (
-    <section id="about" className="flex mt-7  mx-15 scroll-mt-16 mb-25">
+    <section
+      id="about"
+      className="flex mt-7 15 mx- scroll-mt-14 mb-5  bg-[#d2e7e1] pb-40 w-full "
+    >
       <div className="w-1/2 flex justify-center items-center ">
         <Image
           src="/image/hero/pharmacist3.jpg"
@@ -37,33 +40,36 @@ export default function About() {
         <div className="flex justify-center pb-4 ">
           <LightText text="ABOUT OUR PHARMACY" />
         </div>
-        <div>
-          <p className=" text-5xl mb-6 font-bold">
-            Professional Care You Can Trust
-          </p>
-          <p className="mb-5 text-black/60 ">
-            GreenLeaf Pharmacy has been serving our community for over a decade.
-            We are dedicated to providing quality medicines and personalized
-            healthcare services to every customer who walks through our door.
-          </p>
-          <p className=" text-black/60">
-            {" "}
-            Our team of licensed pharmacists is always available to answer your
-            questions, help with prescriptions, and guide you toward better
-            health choices for you and your family.
-          </p>
-        </div>
-        <div className="flex flex-wrap">
-          {NumberValues.map((num) => {
-            return (
-              <div
-                key={num.text}
-                className="m-3  bg-[#abfdaf] rounded-2xl  border p-5 pr-20"
-              >
-                <NumberCard number={num.number} text={num.text} />
-              </div>
-            );
-          })}
+        <div className="pr-5">
+          <div>
+            <p className=" text-5xl mb-6 font-bold">
+              Professional Care You Can Trust
+            </p>
+            <p className="mb-5 text-black/60 ">
+              GreenLeaf Pharmacy has been serving our community for over a
+              decade. We are dedicated to providing quality medicines and
+              personalized healthcare services to every customer who walks
+              through our door.
+            </p>
+            <p className=" text-black/60">
+              {" "}
+              Our team of licensed pharmacists is always available to answer
+              your questions, help with prescriptions, and guide you toward
+              better health choices for you and your family.
+            </p>
+          </div>
+          <div className="flex flex-wrap">
+            {NumberValues.map((num) => {
+              return (
+                <div
+                  key={num.text}
+                  className="m-3 grid grid-cols-2 bg-[#abfdaf] rounded-2xl  border p-5 pr-20"
+                >
+                  <NumberCard number={num.number} text={num.text} />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

@@ -7,21 +7,24 @@ export default function ProductCard({
     image: string;
     title: string;
     description: string;
+    link: string;
   };
 }) {
   return (
-    <div className="bg-white rounded-3xl p-2 flex items-center justify-center">
-      <div className="   w-75 h-75 rounded-t-2xl">
-        <Image
-          src={ProductObj.image}
-          alt="product image"
-          width={500}
-          height={500}
-          className="object-cover w-75 h-75 rounded-2xl hover:scale-103 "
-        />
-        <p className="text-3xl ">{ProductObj.title}</p>
-        <p className="text-black ">{ProductObj.description}</p>
+    <a href={ProductObj.link}>
+      <div className="bg-white rounded-3xl p-2 flex items-center justify-center">
+        <div className="   w-75 h-75 rounded-t-2xl">
+          <Image
+            src={ProductObj.image}
+            alt="product image"
+            width={500}
+            height={500}
+            className="object-cover w-75 h-75 rounded-2xl hover:scale-103 "
+          />
+          <p className="text-3xl ">{ProductObj.title}</p>
+          <p className="text-black ">{ProductObj.description}</p>
+        </div>
       </div>
-    </div>
+    </a>
   );
 }

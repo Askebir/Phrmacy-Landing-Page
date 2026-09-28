@@ -29,8 +29,7 @@ const serviceCardObj = [
   {
     image: "/image/service/Blood Pressure Check.jpeg",
     title: "Blood Pressure Check",
-    description:
-      "Free blood pressure monitoring available during pharmacy hours.",
+    description: "Blood pressure monitoring available during pharmacy hours.",
   },
   {
     image: "/image/service/Fertility Counseling.jpeg",

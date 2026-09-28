@@ -5,9 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
-export default function Navbar() {
-  const [activeLink, setActiveLink] = useState("");
-
+export default function Navbar({
+  activeLink,
+  setActiveLink,
+}: {
+  activeLink: string;
+  setActiveLink: (link: string) => void;
+}) {
   return (
     <nav className="relative z-100 sticky top-0 bg-white h-14 py-7 px-3 border text-xl flex items-center justify-between shadow-xl  ">
       <a href="#home">
@@ -89,7 +93,8 @@ export default function Navbar() {
           Contact
         </a>
       </div>
-      <div>
+      <div className="flex gap-4 items-center justify-center">
+        <p className="text-bold">+1(555) 123-4567</p>
         <Button asChild className="rounded-full">
           <Link
             href="tel:+251911234567"

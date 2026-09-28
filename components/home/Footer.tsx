@@ -1,10 +1,17 @@
+"use client";
 import React from "react";
 import { FaTiktok, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 
 import { FaXTwitter } from "react-icons/fa6";
 import LightText from "../subComponents/LightText";
 
-export default function Footer() {
+export default function Footer({
+  activeLink,
+  setActiveLink,
+}: {
+  activeLink: string;
+  setActiveLink: (link: string) => void;
+}) {
   return (
     <footer className="text-white/40  ">
       <div className="flex-col">
@@ -70,11 +77,43 @@ export default function Footer() {
             <div>
               <p className="text-white">Quick Links</p>
               <nav className="flex flex-col">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#products">Products</a>
-                <a href="#contact">Contact</a>
+                <a
+                  href="#home"
+                  className="hover:text-blue-600 hover:border-b-2 w-max hover:border-blue-600"
+                  onClick={() => setActiveLink("home")}
+                >
+                  Home
+                </a>
+                <a
+                  href="#products"
+                  className="hover:text-blue-600 hover:border-b-2 w-max hover:border-blue-600"
+                  onClick={() => setActiveLink("products")}
+                >
+                  Products
+                </a>
+
+                <a
+                  href="#services"
+                  className="hover:text-blue-600 hover:border-b-2 w-max hover:border-blue-600"
+                  onClick={() => setActiveLink("services")}
+                >
+                  Services
+                </a>
+                <a
+                  href="#about"
+                  className="hover:text-blue-600 hover:border-b-2 w-max hover:border-blue-600"
+                  onClick={() => setActiveLink("about")}
+                >
+                  About
+                </a>
+
+                <a
+                  href="#contact"
+                  className="hover:text-blue-600 hover:border-b-2 w-max hover:border-blue-600"
+                  onClick={() => setActiveLink("contact")}
+                >
+                  Contact
+                </a>
               </nav>
             </div>
             <div>
@@ -92,7 +131,7 @@ export default function Footer() {
                 <li className="text-white">Contact</li>
                 <li>+1 (555) 123-4567</li>
                 <li>info@greenleafpharmacy.com</li>
-                <li>123 Main Street, Springfield, IL 62701</li>
+                <li>Lebu Muzikzbet, Addis Ababa, Ethiopia</li>
               </ul>
             </div>
           </div>

@@ -1,0 +1,203 @@
+import AllProductCard from "@/components/subComponents/AllProductCard";
+import { title } from "process";
+
+const MedicinesObj = [
+  //
+  {
+    title: "A. Pain & Fever",
+    drug: [
+      {
+        name: "Paracetamol",
+        image: "/image/Medicines/Paracetamol.jpg",
+      },
+      {
+        name: "Ibuprofen",
+        image: "/image/Medicines/Ibuprofen.jpg",
+      },
+      {
+        name: "Diclofenac",
+        image: "/image/Medicines/Diclofenac.jpg",
+      },
+      {
+        name: "Asprin",
+        image: "/image/Medicines/Aspirin.jpg",
+      },
+    ],
+  },
+
+  {
+    title: "B. Cough, Cold & Allergy",
+    drug: [
+      {
+        name: "Cough syrups",
+        image: "/image/Medicines/Cough syrups.jpg",
+      },
+      {
+        name: "Lozenges",
+        image: "/image/Medicines/Lozenges.jpg",
+      },
+
+      {
+        name: " Nasal sprays",
+        image: "/image/Medicines/Nasal sprays.jpeg",
+      },
+
+      {
+        name: "Decongestants",
+        image: "/image/Medicines/Decongestants.jpeg",
+      },
+    ],
+  },
+
+  {
+    title: "C. Digestive Health",
+    drug: [
+      {
+        name: "Antacids",
+        image: "/image/Medicines/Antacids.jpg",
+      },
+      {
+        name: "Oral rehydration salts(ORS)",
+        image: "/image/Medicines/Oral rehydration salts.jpg",
+      },
+      {
+        name: "Laxatives",
+        image: "/image/Medicines/Laxatives.jpg",
+      },
+      {
+        name: "Anti-diarrheal products",
+        image: "/image/Medicines/Anti-diarrheal products.jpg",
+      },
+    ],
+  },
+
+  {
+    title: " D. Antibiotics & Anti-infectives",
+    drug: [
+      {
+        name: "Amoxicillin",
+        image: "/image/Medicines/Amoxicillin.jpg",
+      },
+      {
+        name: "Azithromycin",
+        image: "/image/Medicines/Azithromycin.jpg",
+      },
+      {
+        name: "Ciprofloxacin",
+        image: "/image/Medicines/Ciprofloxacin.jpg",
+      },
+      {
+        name: "Metronidazole",
+        image: "/image/Medicines/Metronidazole.jpg",
+      },
+    ],
+  },
+  {
+    title: "E. Chronic Disease Medicines",
+    drug: [
+      {
+        name: "Metformin",
+        image: "/image/Medicines/Metformin.jpg",
+      },
+      {
+        name: "Amlodipine",
+        image: "/image/Medicines/Amlodipine.jpg",
+      },
+      {
+        name: "Losartan",
+        image: "/image/Medicines/Losartan.jpg",
+      },
+      {
+        name: "Atorvastatin",
+        image: "/image/Medicines/Atorvastatin.jpg",
+      },
+      {
+        name: "Insulin",
+        image: "/image/Medicines/Insulin.jpg",
+      },
+    ],
+  },
+  {
+    title: "F. Vitamins & Supplements",
+    drug: [
+      {
+        name: "Multivitamins",
+        image: "/image/Medicines/Multivitamins.jpg",
+      },
+      {
+        name: "Vitamin C",
+        image: "/image/Medicines/Vitamin C.jpg",
+      },
+      {
+        name: "Iron supplements",
+        image: "/image/Medicines/Iron supplements.jpg",
+      },
+      {
+        name: "Calcium supplements",
+        image: "/image/Medicines/Calcium supplements.jpg",
+      },
+    ],
+  },
+  {
+    title: "G. First Aid & Medical Supplies",
+    drug: [
+      {
+        name: "Bandages",
+        image: "/image/Medicines/Bandages.jpg",
+      },
+      {
+        name: "Cotton",
+        image: "/image/Medicines/Cotton.jpg",
+      },
+      {
+        name: "Gauze",
+        image: "/image/Medicines/Gauze.jpg",
+      },
+      {
+        name: "Antiseptic",
+        image: "/image/Medicines/Antiseptic.jpg",
+      },
+      {
+        name: "Digital thermometer",
+        image: "/image/Medicines/Digital thermometer.jpg",
+      },
+      {
+        name: "Disposable gloves",
+        image: "/image/Medicines/Disposable gloves.jpg",
+      },
+    ],
+  },
+
+  //
+
+  //
+
+  //
+
+  //
+
+  //
+
+  //
+];
+
+export default function Medicines() {
+  return (
+    <div>
+      <div className=" flex flex-wrap items-center justify-center mx-auto mb-40">
+        {MedicinesObj.map((category) => {
+          return (
+            <div key={category.title} className="flex flex-col">
+              <div>{category.title}</div>
+              <div className="grid grid-cols-4">
+                {category.drug.map((drug) => (
+                  <AllProductCard drug={drug} key={drug.name} />
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

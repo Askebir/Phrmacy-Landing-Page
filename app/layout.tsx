@@ -5,6 +5,8 @@ import Navbar from "@/components/home/Navbar";
 import Footer from "@/components/home/Footer";
 import { Toaster } from "@/components/ui/sonner";
 
+import NavigationWrapper from "@/components/home/NavigationWrapper";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,10 +30,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
        h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}
+        <NavigationWrapper>{children}</NavigationWrapper>
         <Toaster position="top-center" />
-        <Footer />
       </body>
     </html>
   );
