@@ -134,7 +134,7 @@ const MedicinesObj = [
       },
       {
         name: "Calcium supplements",
-        image: "/image/Medicines/Calcium supplements.jpg",
+        image: "/image/Medicines/Calcium supplementss.jpeg",
       },
     ],
   },
@@ -184,12 +184,14 @@ const MedicinesObj = [
 export default function Medicines() {
   return (
     <div>
-      <div className=" flex flex-wrap items-center justify-center mx-auto mb-40">
+      <div className=" flex flex-wrap items-center justify-center mx-auto pb-40 bg-[#dfdfdf] ">
         {MedicinesObj.map((category) => {
           return (
             <div key={category.title} className="flex flex-col">
-              <div className="border border-red-700 w-max rounded-full px-3 mt-2  bg-red-300">
-                {category.title}
+              <div className="border-2 border-blue-800  bg-blue-300 w-max rounded-full px-3 mt-1 flex items-center justify-center ">
+                <p className="text-center font-bold text-xl ">
+                  {category.title}
+                </p>
               </div>
               <div className="grid grid-cols-4">
                 {category.drug.map((drug) => (
