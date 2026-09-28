@@ -58,7 +58,7 @@ const MedicinesObj = [
       },
       {
         name: "Oral rehydration salts(ORS)",
-        image: "/image/Medicines/Oral rehydration salts.jpg",
+        image: "/image/Medicines/Oral rehydration salts(ORS).jpg",
       },
       {
         name: "Laxatives",
@@ -76,7 +76,7 @@ const MedicinesObj = [
     drug: [
       {
         name: "Amoxicillin",
-        image: "/image/Medicines/Amoxicillin.jpg",
+        image: "/image/Medicines/Amoxicillin.jpeg",
       },
       {
         name: "Azithromycin",
@@ -188,7 +188,9 @@ export default function Medicines() {
         {MedicinesObj.map((category) => {
           return (
             <div key={category.title} className="flex flex-col">
-              <div>{category.title}</div>
+              <div className="border border-red-700 w-max rounded-full px-3 mt-2  bg-red-300">
+                {category.title}
+              </div>
               <div className="grid grid-cols-4">
                 {category.drug.map((drug) => (
                   <AllProductCard drug={drug} key={drug.name} />
