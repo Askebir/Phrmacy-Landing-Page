@@ -10,15 +10,11 @@ const BabyEssentialsObj = [
       },
       {
         name: "Baby diapers",
-        image: "/image/Baby Essentials/Baby diapers.jpg",
+        image: "/image/Baby Essentials/Baby diapers.jpeg",
       },
       {
         name: "Different size diapers",
         image: "/image/Baby Essentials/Different size diapers.jpg",
-      },
-      {
-        name: "Training pants",
-        image: "/image/Baby Essentials/Training pants.jpg",
       },
     ],
   },
@@ -41,7 +37,7 @@ const BabyEssentialsObj = [
 
       {
         name: "Baby lotion",
-        image: "/image/Baby Essentials/ Baby lotion.jpg",
+        image: "/image/Baby Essentials/Baby lotion.jpg",
       },
       {
         name: "Baby powder",
@@ -107,7 +103,7 @@ const BabyEssentialsObj = [
       },
       {
         name: " Baby oral-care products",
-        image: "/image/Baby Essentials/ Baby oral-care products.jpg",
+        image: "/image/Baby Essentials/Baby oral-care products.jpg",
       },
     ],
   },
@@ -117,19 +113,16 @@ const BabyEssentialsObj = [
     drug: [
       {
         name: "Infant formula",
-        image: "/image/Baby Essentials/.jpg",
+        image: "/image/Baby Essentials/Infant formula.jpg",
       },
       {
         name: "Follow-on formula",
         image: "/image/Baby Essentials/Follow-on formula.jpg",
       },
-      {
-        name: "",
-        image: "/image/Baby Essentials/.jpg",
-      },
+
       {
         name: " Baby cereal",
-        image: "/image/Baby Essentials/ Baby cereal.jpg",
+        image: "/image/Baby Essentials/Baby cereal.jpg",
       },
     ],
   },

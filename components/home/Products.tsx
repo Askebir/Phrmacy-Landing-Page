@@ -19,13 +19,13 @@ const ProductsObjs = [
     image: "/image/products/Baby Essentials.png",
     title: "Baby Essentials",
     description: "Safe products for newborns and toddlers.",
-    link: "/Baby Essentials",
+    link: "/BabyEssentials",
   },
   {
     image: "/image/products/Personal Care.jpeg",
     title: "Personal Care",
     description: "Daily hygiene and wellness products.",
-    link: "/Personal Care",
+    link: "/PersonalCare",
   },
 ];
 
