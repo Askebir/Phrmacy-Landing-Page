@@ -14,7 +14,7 @@ export default function Navbar({
 }) {
   return (
     <nav className="relative z-100 sticky top-0 bg-white h-14 py-7 px-3 border text-xl flex items-center justify-between shadow-xl  ">
-      <a href="#home">
+      <a href="/">
         <div className="flex items-center justify-center gap-3">
           <div className="">
             <Image
