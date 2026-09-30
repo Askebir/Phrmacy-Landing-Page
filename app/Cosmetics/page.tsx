@@ -1,4 +1,5 @@
 import AllProductCard from "@/components/subComponents/AllProductCard";
+import ProductNavigation from "@/components/subComponents/ProductNavigation";
 
 const CosmoticsObj = [
   {
@@ -142,22 +143,27 @@ export default function Consmotics() {
   return (
     <div>
       <div className=" flex flex-wrap items-center justify-center mx-auto pb-40 bg-[#dfdfdf] ">
-        {CosmoticsObj.map((category) => {
-          return (
-            <div key={category.title} className="flex flex-col">
-              <div className="border-2 border-blue-800  bg-blue-300 w-max rounded-full px-3 mt-1 flex items-center justify-center ">
-                <p className="text-center font-bold text-xl ">
-                  {category.title}
-                </p>
+        <div className="relative  ">
+          <div className="  z-0 absolute top-1 left-100 flex items-center justify-center   ">
+            <ProductNavigation />
+          </div>
+          {CosmoticsObj.map((category) => {
+            return (
+              <div key={category.title} className="flex flex-col">
+                <div className="border-2 border-blue-800  bg-blue-300 w-max rounded-full px-3 mt-1 flex items-center justify-center ">
+                  <p className="text-center font-bold text-xl ">
+                    {category.title}
+                  </p>
+                </div>
+                <div className="grid grid-cols-4">
+                  {category.drug.map((drug) => (
+                    <AllProductCard drug={drug} key={drug.name} />
+                  ))}
+                </div>
               </div>
-              <div className="grid grid-cols-4">
-                {category.drug.map((drug) => (
-                  <AllProductCard drug={drug} key={drug.name} />
-                ))}
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

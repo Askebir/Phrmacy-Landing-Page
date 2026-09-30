@@ -9,7 +9,7 @@ export default function NavigationWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  const [activeLink, setActiveLink] = useState("home");
+  const [activeLink, setActiveLink] = useState("");
   return (
     <>
       <Navbar activeLink={activeLink} setActiveLink={setActiveLink} />
