@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 // export default function NavigationWrapper({
@@ -18,68 +19,55 @@ import { useState } from "react";
 // }
 
 export default function ProductNavigation() {
-  const [activeLink, setActiveLink] = useState("home");
+  const pathname = usePathname();
+  console.log("pathname", pathname);
 
   return (
     <div className=" flex items-center justify-center   ">
       <div className="flex items-center justify-center gap-10 shadow-xl w-max px-7 py-2 rounded-4xl  bg-[#eaeee9] border border-black/20 ">
         <Link
           href="/AllProducts"
-          onClick={() => setActiveLink("AllProducts")}
-          className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
-            ${
-              activeLink === "AllProducts"
-                ? "text-blue-600 border-b-2 border-blue-600"
-                : "text-gray-700 border-b-2 border-transparent"
-            }`}
+          className={`border-b-2 ${
+            pathname === "/AllProducts"
+              ? "text-blue-600 border-blue-600"
+              : "text-gray-700 border-transparent hover:text-blue-600 hover:border-blue-600"
+          }`}
         >
           All Products
         </Link>
         <Link
           href="/Medicines"
-          onClick={() => setActiveLink("Medicines")}
-          className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
-            ${
-              activeLink === "Medicines"
-                ? "text-blue-600 border-b-2 border-blue-600"
-                : "text-gray-700 border-b-2 border-transparent"
-            }`}
+          className={`border-b-2 ${
+            pathname === "/Medicines"
+              ? "text-blue-600 border-blue-600"
+              : "text-gray-700 border-transparent hover:text-blue-600 hover:border-blue-600"
+          }`}
         >
           Medicines
         </Link>
         <Link
           href="/Cosmetics"
-          onClick={() => setActiveLink("Cosmetics")}
-          className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
-            ${
-              activeLink === "Cosmetics"
-                ? "text-blue-600 border-b-2 border-blue-600"
-                : "text-gray-700 border-b-2 border-transparent"
-            }`}
+          className={`border-b-2${
+            pathname === "/Cosmetics"
+              ? "text-blue-600 border-blue-600 "
+              : "text-gray-700 border-transparent hover:text-blue-600 hover:border-blue-600"
+          }`}
         >
           Cosmetics
         </Link>
         <Link
           href="/BabyEssentials"
-          onClick={() => setActiveLink("BabyEssentials")}
-          className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
-            ${
-              activeLink === "BabyEssentials"
-                ? "text-blue-600 border-b-2 border-blue-600"
-                : "text-gray-700 border-b-2 border-transparent"
-            }`}
+          className={`border-b-2${
+            pathname === "/BabyEssentials"
+              ? "text-blue-600 border-blue-600 "
+              : "text-gray-700 border-transparent hover:text-blue-600 hover:border-blue-600"
+          }`}
         >
           Baby Essentials
         </Link>
         <Link
           href="/PersonalCare"
-          onClick={() => setActiveLink("PersonalCare")}
-          className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
-            ${
-              activeLink === "PersonalCare"
-                ? "text-blue-600 border-b-2 border-blue-600"
-                : "text-gray-700 border-b-2 border-transparent"
-            }`}
+          className={`border-b-2${pathname === "/PersonalCare" ? "text-blue-600 border-blue-600" : "border-transparent hover:text-blue-600 hover:border-blue-600 text-gray-700  "}`}
         >
           Persona Care
         </Link>
