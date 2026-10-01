@@ -13,7 +13,7 @@ export default function Navbar({
   setActiveLink: (link: string) => void;
 }) {
   return (
-    <nav className="relative z-100 sticky top-0 bg-white h-14 py-7 px-3 border text-xl flex items-center justify-between shadow-xl  ">
+    <nav className=" z-100 sticky top-0 bg-white h-14 py-7 px-3 border text-xl flex items-center justify-between shadow-xl  ">
       <a href="/">
         <div className="flex items-center justify-center gap-3">
           <div className="">
@@ -32,19 +32,18 @@ export default function Navbar({
       </a>
       <div className="flex gap-8 text-black text- ">
         <a
-          href="/"
+          href="/#home"
           onClick={() => setActiveLink("home")}
-          className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
-            ${
-              activeLink === "home"
-                ? "text-blue-600 border-b-2 border-blue-600"
-                : "text-gray-700 border-b-2 border-transparent"
-            }`}
+          className={`border-b-2 ${
+            activeLink === "home"
+              ? "text-blue-600 border-blue-600"
+              : "text-gray-700 border-transparent"
+          }`}
         >
           Home
         </a>
         <a
-          href="#products"
+          href="/#products"
           onClick={() => setActiveLink("products")}
           className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
             ${
@@ -56,7 +55,7 @@ export default function Navbar({
           Products
         </a>
         <a
-          href="#services"
+          href="/#services"
           onClick={() => setActiveLink("services")}
           className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
             ${
@@ -68,7 +67,7 @@ export default function Navbar({
           Services
         </a>
         <a
-          href="#about"
+          href="/#about"
           onClick={() => setActiveLink("about")}
           className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
             ${
@@ -81,7 +80,7 @@ export default function Navbar({
         </a>
 
         <a
-          href="#contact"
+          href="/#contact"
           onClick={() => setActiveLink("contact")}
           className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
             ${
@@ -95,19 +94,19 @@ export default function Navbar({
       </div>
       <div className="flex gap-4 items-center justify-center">
         <p className="text-bold">+1(555) 123-4567</p>
-        <Button asChild className="rounded-full">
+        <Button asChild className=" bg-green-700 hover:bg-green-500   ">
           <Link
             href="tel:+251911234567"
-            className="bg-[#096e00]!  inline-flex
+            className="bg-[#096e00]  inline-flex
     items-center
     justify-center  px-6
     py-3   font-semibold
     text-white
     transition-all
     duration-300
-    hover:bg-blue-700
     hover:scale-105
-    active:scale-95 text-xl  "
+    hover:bg-green-400
+    active:scale-95 text-xl   "
           >
             Free Consultation
           </Link>

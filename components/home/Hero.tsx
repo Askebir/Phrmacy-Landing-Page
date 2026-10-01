@@ -31,7 +31,7 @@ export default function Hero() {
         <div className="flex gap-3 py-10">
           <button className="rounded-full">
             <a
-              href="#products"
+              href="/AllProducts"
               className="bg-[#096e00]!  inline-flex
     items-center
     justify-center  px-5 py-2
@@ -42,6 +42,7 @@ export default function Hero() {
    hover:scale-105 active:95
     font-bold
     rounded-full
+   
     "
             >
               Our Products
