@@ -17,6 +17,11 @@ const BabyEssentialsObj = [
         name: "Different size diapers",
         image: "/image/Baby Essentials/Different size diapers.jpg",
       },
+
+      {
+        name: " Overnight diapers",
+        image: "/image/Baby Essentials/Overnight diapers.jpeg",
+      },
     ],
   },
 
@@ -31,10 +36,10 @@ const BabyEssentialsObj = [
         name: "Baby soap",
         image: "/image/Baby Essentials/Baby soap.jpg",
       },
-      {
-        name: "Baby shampoo",
-        image: "/image/Baby Essentials/Baby shampoo.jpg",
-      },
+      // {
+      //   name: "Baby shampoo",
+      //   image: "/image/Baby Essentials/Baby shampoo.jpg",
+      // },
 
       {
         name: "Baby lotion",
@@ -106,6 +111,10 @@ const BabyEssentialsObj = [
         name: " Baby oral-care products",
         image: "/image/Baby Essentials/Baby oral-care products.jpg",
       },
+      {
+        name: "Baby medicine spoon",
+        image: "/image/Baby Essentials/Baby Medicine Spoon.jpg",
+      },
     ],
   },
 
@@ -117,13 +126,17 @@ const BabyEssentialsObj = [
         image: "/image/Baby Essentials/Infant formula.jpg",
       },
       {
-        name: "Follow-on formula",
-        image: "/image/Baby Essentials/Follow-on formula.jpg",
+        name: "Faffa baby food",
+        image: "/image/Baby Essentials/Faffa baby food.jpeg",
       },
 
       {
         name: " Baby cereal",
         image: "/image/Baby Essentials/Baby cereal.jpg",
+      },
+      {
+        name: "Infant  milk powder.jpeg",
+        image: "/image/Baby Essentials/Infant  milk powder.jpeg",
       },
     ],
   },
@@ -133,15 +146,15 @@ export default function page() {
   return (
     <div>
       <div className=" flex flex-wrap items-center justify-center mx-auto pb-40 bg-[#dfdfdf] ">
-        <div className="relative  ">
-          <div className="  z-0 absolute top-1 left-100 flex items-center justify-center   ">
+        <div className="relative -top-10  ">
+          <div className="  z-50 sticky top-18 left-100 flex items-center justify-center   ">
             <ProductNavigation />
           </div>
           {BabyEssentialsObj.map((category) => {
             return (
               <div key={category.title} className="flex flex-col">
-                <div className="border-2 border-blue-800  bg-blue-300 w-max rounded-full px-3 mt-1 flex items-center justify-center ">
-                  <p className="text-center font-bold text-xl ">
+                <div className="border-2 border-blue-800  mt-3 mb-1  bg-blue-300 w-max rounded-full px-3  flex items-center justify-center ">
+                  <p className="text-center font-bold text-xl py-1 ">
                     {category.title}
                   </p>
                 </div>

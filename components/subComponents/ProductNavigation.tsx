@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 
 // export default function NavigationWrapper({
 //   children,
@@ -47,9 +46,9 @@ export default function ProductNavigation() {
         </Link>
         <Link
           href="/Cosmetics"
-          className={`border-b-2${
+          className={`border-b-2 ${
             pathname === "/Cosmetics"
-              ? "text-blue-600 border-blue-600 "
+              ? "text-blue-600 border-blue-600"
               : "text-gray-700 border-transparent hover:text-blue-600 hover:border-blue-600"
           }`}
         >
@@ -57,9 +56,9 @@ export default function ProductNavigation() {
         </Link>
         <Link
           href="/BabyEssentials"
-          className={`border-b-2${
+          className={`border-b-2 ${
             pathname === "/BabyEssentials"
-              ? "text-blue-600 border-blue-600 "
+              ? "text-blue-600 border-blue-600"
               : "text-gray-700 border-transparent hover:text-blue-600 hover:border-blue-600"
           }`}
         >
@@ -67,7 +66,7 @@ export default function ProductNavigation() {
         </Link>
         <Link
           href="/PersonalCare"
-          className={`border-b-2${pathname === "/PersonalCare" ? "text-blue-600 border-blue-600" : "border-transparent hover:text-blue-600 hover:border-blue-600 text-gray-700  "}`}
+          className={`border-b-2 ${pathname === "/PersonalCare" ? "text-blue-600 border-blue-600" : "border-transparent hover:text-blue-600 hover:border-blue-600 text-gray-700  "}`}
         >
           Persona Care
         </Link>

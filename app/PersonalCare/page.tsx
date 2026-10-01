@@ -60,6 +60,10 @@ const PersonalCareObj = [
         name: "Antiperspirant",
         image: "/image/Personal Care/Antiperspirant.jpg",
       },
+      {
+        name: "Body Spray",
+        image: "/image/Personal Care/Body Spray.jpeg",
+      },
     ],
   },
   {
@@ -73,9 +77,15 @@ const PersonalCareObj = [
         name: "Panty liners",
         image: "/image/Personal Care/Panty liners.jpg",
       },
+
       {
         name: "Feminine wash",
         image: "/image/Personal Care/Feminine wash.jpg",
+      },
+
+      {
+        name: "Menstrual cups",
+        image: "/image/Personal Care/Menstrual cups.jpeg",
       },
     ],
   },
@@ -108,10 +118,10 @@ const PersonalCareObj = [
         name: "Hand sanitizer",
         image: "/image/Personal Care/Hand sanitizer.jpg",
       },
-      {
-        name: "Wet wipes",
-        image: "/image/Personal Care/Wet wipes.jpg",
-      },
+      // {
+      //   name: "Wet wipes",
+      //   image: "/image/Personal Care/Wet wipes.jpg",
+      // },
       {
         name: "Cotton swabs",
         image: "/image/Personal Care/Cotton swabs.jpg",
@@ -123,6 +133,10 @@ const PersonalCareObj = [
       {
         name: "Hand soap",
         image: "/image/Personal Care/Hand soap.jpeg",
+      },
+      {
+        name: "Paper towels",
+        image: "/image/Personal Care/Paper towels.jpeg",
       },
     ],
   },
@@ -141,6 +155,11 @@ const PersonalCareObj = [
         name: "Lubricants",
         image: "/image/Personal Care/Lubricants.jpg",
       },
+
+      {
+        name: "Vaginal moisturizers",
+        image: "/image/Personal Care/Vaginal moisturizers.jpg",
+      },
     ],
   },
 ];
@@ -149,15 +168,15 @@ export default function PersonalCare() {
   return (
     <div>
       <div className=" flex flex-wrap items-center justify-center mx-auto pb-40 bg-[#dfdfdf] ">
-        <div className="relative  ">
-          <div className="  z-0 absolute top-1 left-100 flex items-center justify-center   ">
+        <div className="relative -top-10  ">
+          <div className="  z-50 sticky top-18 left-100 flex items-center justify-center   ">
             <ProductNavigation />
           </div>
           {PersonalCareObj.map((category) => {
             return (
               <div key={category.title} className="flex flex-col">
-                <div className="border-2 border-blue-800  bg-blue-300 w-max rounded-full px-3 mt-1 flex items-center justify-center ">
-                  <p className="text-center font-bold text-xl ">
+                <div className="border-2 border-blue-800  mt-3 mb-1  bg-blue-300 w-max rounded-full px-3  flex items-center justify-center ">
+                  <p className="text-center font-bold text-xl py-1 ">
                     {category.title}
                   </p>
                 </div>
@@ -169,7 +188,6 @@ export default function PersonalCare() {
               </div>
             );
           })}
-          j
         </div>
       </div>
     </div>

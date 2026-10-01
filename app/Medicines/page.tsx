@@ -54,8 +54,8 @@ const MedicinesObj = [
     title: "C. Digestive Health",
     drug: [
       {
-        name: "Antacids",
-        image: "/image/Medicines/Antacids.jpg",
+        name: "Omeprazole",
+        image: "/image/Medicines/Omeprazole.jpg",
       },
       {
         name: "Oral rehydration salts(ORS)",
@@ -104,10 +104,7 @@ const MedicinesObj = [
         name: "Amlodipine",
         image: "/image/Medicines/Amlodipine.jpg",
       },
-      {
-        name: "Losartan",
-        image: "/image/Medicines/Losartan.jpg",
-      },
+
       {
         name: "Atorvastatin",
         image: "/image/Medicines/Atorvastatin.jpg",
@@ -168,33 +165,21 @@ const MedicinesObj = [
       },
     ],
   },
-
-  //
-
-  //
-
-  //
-
-  //
-
-  //
-
-  //
 ];
 
 export default function Medicines() {
   return (
     <div>
-      <div className="  flex flex-wrap items-center justify-center mx-auto pb-40 bg-[#dfdfdf] ">
-        <div className="relative  ">
-          <div className="  z-0 absolute top-1 left-100 flex items-center justify-center   ">
+      <div className=" flex flex-wrap items-center justify-center mx-auto pb-40 bg-[#dfdfdf] ">
+        <div className="relative -top-10  ">
+          <div className="  z-50 sticky top-18 left-100 flex items-center justify-center   ">
             <ProductNavigation />
           </div>
           {MedicinesObj.map((category) => {
             return (
-              <div key={category.title} className="flex flex-col ">
-                <div className="border-2 border-blue-800  bg-blue-300 w-max rounded-full px-3 mt-1 flex items-center justify-center ">
-                  <p className="text-center font-bold text-xl pb-1 ">
+              <div key={category.title} className="flex flex-col">
+                <div className="border-2 border-blue-800  mt-3 mb-1  bg-blue-300 w-max rounded-full px-3  flex items-center justify-center ">
+                  <p className="text-center font-bold text-xl py-1 ">
                     {category.title}
                   </p>
                 </div>

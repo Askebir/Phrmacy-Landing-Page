@@ -102,10 +102,7 @@ const CosmoticsObj = [
         name: "Hair oil",
         image: "/image/cosmetics/Hair oil.jpg",
       },
-      {
-        name: "Hair treatment",
-        image: "/image/cosmetics/Hair treatment.jpg",
-      },
+
       {
         name: "Anti-dandruff shampoo",
         image: "/image/cosmetics/Anti-dandruff shampoo.jpg",
@@ -115,10 +112,10 @@ const CosmoticsObj = [
   {
     title: "F. Beauty & Makeup",
     drug: [
-      {
-        name: "Lip balm",
-        image: "/image/cosmetics/Lip balm.jpg",
-      },
+      // {
+      //   name: "Lip balm",
+      //   image: "/image/cosmetics/Lip balm.jpg",
+      // },
       {
         name: "Lipstick",
         image: "/image/cosmetics/Lipstick.jpg",
@@ -143,15 +140,15 @@ export default function Consmotics() {
   return (
     <div>
       <div className=" flex flex-wrap items-center justify-center mx-auto pb-40 bg-[#dfdfdf] ">
-        <div className="relative  ">
-          <div className="  z-0 absolute top-1 left-100 flex items-center justify-center   ">
+        <div className="relative -top-10  ">
+          <div className="  z-50 sticky top-18 left-100 flex items-center justify-center   ">
             <ProductNavigation />
           </div>
           {CosmoticsObj.map((category) => {
             return (
               <div key={category.title} className="flex flex-col">
-                <div className="border-2 border-blue-800  bg-blue-300 w-max rounded-full px-3 mt-1 flex items-center justify-center ">
-                  <p className="text-center font-bold text-xl ">
+                <div className="border-2 border-blue-800  mt-3 mb-1  bg-blue-300 w-max rounded-full px-3  flex items-center justify-center ">
+                  <p className="text-center font-bold text-xl py-1 ">
                     {category.title}
                   </p>
                 </div>

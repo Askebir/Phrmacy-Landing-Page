@@ -32,7 +32,7 @@ export default function Navbar({
       </a>
       <div className="flex gap-8 text-black text- ">
         <a
-          href="#home"
+          href="/"
           onClick={() => setActiveLink("home")}
           className={`hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600
             ${
