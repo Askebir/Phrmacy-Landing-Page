@@ -20,7 +20,7 @@ export default function AllProductCard({
         />
         {/* bg-[#cfcdcd]  */}
       </div>
-      <div className="flex items-center justify-center font-bold text-3xl my-1 text-center ">
+      <div className="flex items-center justify-center font-bold text-2xl my-1 text-center ">
         <p className="text-black">{drug.name}</p>
       </div>
 

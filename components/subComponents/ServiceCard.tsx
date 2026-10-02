@@ -6,7 +6,7 @@ export default function ServiceCard({
   serviceCardObj: { image: string; title: string; description: string };
 }) {
   return (
-    <div className="    p-2 w-75  bg-white rounded-xl shadow-2xl mb-5  ">
+    <div className="    p-2 w-75  bg-white rounded-xl shadow-2xl mb-5 border-3 border-black/50 ">
       <div className="h-16 w-16 bg-red-500 items-center justify-center rounded-full ">
         <Image
           src={serviceCardObj.image}

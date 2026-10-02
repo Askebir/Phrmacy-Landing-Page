@@ -3,6 +3,7 @@ import React from "react";
 import { FaTiktok, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 
 import { FaXTwitter } from "react-icons/fa6";
+import { FaTelegram } from "react-icons/fa6";
 import LightText from "../subComponents/LightText";
 
 export default function Footer({
@@ -42,34 +43,36 @@ export default function Footer({
                 <li>Follow Us</li>
                 <li className="flex text-white gap-4 mt-2">
                   <a
-                    href=""
-                    className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center mr-1 "
+                    href="https://www.tiktok.com/@aske8756"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center mr-1 hover:bg-white/30  "
                   >
                     <FaTiktok />
                   </a>
                   <a
-                    href=""
-                    className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center mr-1  "
+                    href="https://t.me/+_3pXBk_G-tdjNTRk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center mr-1  hover:bg-white/30 "
                   >
-                    <FaInstagram />
+                    <FaTelegram className="text-lg" />
                   </a>
                   <a
-                    href=""
-                    className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center mr-1 "
+                    href="https://www.facebook.com/share/1UzGHik56h/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center mr-1 hover:bg-white/30"
                   >
                     <FaFacebook />
                   </a>
                   <a
-                    href=""
-                    className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center mr-1 "
+                    href="https://www.youtube.com/@aske9162"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center mr-1 hover:bg-white/30 "
                   >
                     <FaYoutube />
-                  </a>
-                  <a
-                    href=""
-                    className="h-7 w-7 rounded-full bg-white/10 flex items-center justify-center mr-1 "
-                  >
-                    <FaXTwitter />
                   </a>
                 </li>
               </ul>
