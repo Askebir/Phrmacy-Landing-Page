@@ -128,3 +128,36 @@
     @apply font-sans;
   }
 }
+
+/* Wrapper around the button */
+.rotating-border {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* The glowing light */
+.rotating-border::before {
+  content: "";
+  position: absolute;
+  inset: -150%;
+  z-index: -1;
+
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 300deg,
+    #06b6d4 330deg,
+    #ffffff 350deg,
+    transparent 360deg
+  );
+
+  animation: rotate-border 3s linear infinite;
+}
+
+/* Rotate the gradient continuously */
+@keyframes rotate-border {
+  to {
+    transform: rotate(360deg);
+  }
+}

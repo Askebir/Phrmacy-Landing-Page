@@ -29,10 +29,13 @@ export default function Hero() {
           </p>
         </div>
         <div className="flex gap-3 py-10">
-          <button className="rounded-full">
-            <a
-              href="/AllProducts"
-              className="bg-[#096e00]!  inline-flex
+          <span className="relative isolate inline-flex overflow-hidden rounded-xl p-[2px]">
+            {/* Rotating light */}
+            <span className="absolute inset-[-150%] -z-10 animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_300deg,#06b6d4_330deg,white_350deg,transparent_360deg)]" />
+            <button className="rounded-full">
+              <a
+                href="/AllProducts"
+                className="bg-[#096e00]!  inline-flex
     items-center
     justify-center  px-5 py-2
     text-white
@@ -44,10 +47,11 @@ export default function Hero() {
     rounded-full
    
     "
-            >
-              Our Products
-            </a>
-          </button>
+              >
+                Our Products
+              </a>
+            </button>
+          </span>
 
           <a
             href="#services
