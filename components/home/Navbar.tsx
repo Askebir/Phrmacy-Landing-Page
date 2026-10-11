@@ -37,7 +37,7 @@ export default function Navbar({
           className={`border-b-2 ${
             activeLink === "home"
               ? "text-blue-600 border-blue-600"
-              : "text-gray-700 border-transparent"
+              : "text-gray-700 border-transparent hover:border-b-2 hover:border-blue-600 hover:text-blue-600 active:border-b-2 active:border-blue-600 "
           }`}
         >
           Home

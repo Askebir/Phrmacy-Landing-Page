@@ -56,7 +56,7 @@ export default function Contact() {
             </p>
           </div>
           <div>
-            <div className="flex gap-4 items-center bg-white h-15.5 w-100 rounded-xl my-4  ">
+            <div className="flex gap-4 items-center bg-white h-15.5 w-100 rounded-xl my-4 shadow-xl  ">
               <div className="bg-[#aed6b0] h-10 w-10 flex items-center justify-center rounded-full ml-3 ">
                 <Phone />
               </div>
@@ -66,7 +66,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex gap-4 items-center bg-white h-15.5 w-100 rounded-xl my-4  ">
+            <div className="flex gap-4 items-center bg-white h-15.5 w-100 rounded-xl my-4 shadow-xl  ">
               <div className="bg-[#aed6b0] h-10 w-10 flex items-center justify-center rounded-full ml-3 ">
                 <Mail />
               </div>
@@ -76,7 +76,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex gap-4 items-center bg-white h-15.5 w-100 rounded-xl my-4  ">
+            <div className="flex gap-4 items-center bg-white h-15.5 w-100 rounded-xl my-4 shadow-xl ">
               <div className="bg-[#aed6b0] h-10 w-10 flex items-center justify-center rounded-full ml-3 ">
                 <MapPin />
               </div>
@@ -90,7 +90,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <form ref={form} onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={handleSubmit} className="shadow-2xl">
           <div className="flex flex-col px-5 bg-white w-100 rounded-xl">
             <div>
               <p className="text-2xl font-bold mb-3 pt-5">Send Us a Message</p>

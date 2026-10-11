@@ -43,7 +43,7 @@ export default function FindUs() {
             </div>
           </div>
 
-          <div className="relative z-10 flex items-center justify-center">
+          <div className="relative z-10 flex items-center justify-center shadow-xl  ">
             <div className="relative flex justify-center items-center rounded-3xl border-3 border-black/40  drop-shadow-2xl">
               <Link
                 href="https://maps.app.goo.gl/ADTPMYMR3DdV8ejL7?g_st=ac"

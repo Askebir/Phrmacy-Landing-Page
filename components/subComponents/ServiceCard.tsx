@@ -6,8 +6,8 @@ export default function ServiceCard({
   serviceCardObj: { image: string; title: string; description: string };
 }) {
   return (
-    <div className="    p-2 w-75  bg-white rounded-xl shadow-2xl mb-5 border-3 border-black/50 ">
-      <div className="h-16 w-16 bg-red-500 items-center justify-center rounded-full ">
+    <div className="    p-2 w-75  bg-white rounded-xl shadow-2xl mb-5 border-1 border-black/30  ">
+      <div className="h-16 w-16 bg-red-500 items-center justify-center  rounded-full ">
         <Image
           src={serviceCardObj.image}
           alt="Service image"
@@ -17,9 +17,9 @@ export default function ServiceCard({
         />
       </div>
       <div>
-        <p className="font-bold  ">{serviceCardObj.title}</p>
+        <p className="font-bold ">{serviceCardObj.title}</p>
       </div>
-      <div className="text-black/65">{serviceCardObj.description}</div>
+      <div className="text-gray-800">{serviceCardObj.description}</div>
     </div>
   );
 }
